@@ -52,7 +52,7 @@
     <link href="http://yoursite.com/2015/03/08/Yeoman%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2015/03/08/Yeoman学习笔记/</id>
     <published>2015-03-08T08:53:23.000Z</published>
-    <updated>2015-03-08T09:03:23.706Z</updated>
+    <updated>2015-03-31T06:41:44.759Z</updated>
     <content type="html"><![CDATA[<h2 id="什么是_Yeoman">什么是 Yeoman</h2><p>&emsp;&emsp;<a href="http://yeoman.io/" target="_blank" rel="external">Yeoman</a>是由<a href="https://github.com/paulirish" target="_blank" rel="external">Paul Irish</a>、<a href="https://github.com/addyosmani" target="_blank" rel="external">Addy Osmani</a>、<a href="https://github.com/sindresorhus" target="_blank" rel="external">Sindre Sorhus</a>、<a href="https://github.com/mklabs" target="_blank" rel="external">Mickael Daniel</a>、<a href="https://github.com/ebidel" target="_blank" rel="external">Eric Bidelman</a>和<a href="https://github.com/yeoman/yeoman" target="_blank" rel="external">Yeoman社区</a>共同开发的一个项目。<br>它旨在为开发者提供一系列健壮的工具、程序库和工作流，帮助他们快速构建出漂亮、引人注目的Web应用。</p>
 <h2 id="Yeoman由三个工具的组成:Yo（脚手架工具）、grunt（构建工具）、bower（包管理器）">Yeoman由三个工具的组成:Yo（脚手架工具）、grunt（构建工具）、bower（包管理器）</h2><p>&emsp;&emsp;<a href="http://yeoman.io/" target="_blank" rel="external">Yo</a>是一个“脚手架”应用，简单说就是能够自动创建一些工程目录和配置文件。使用Yo工具叫做Yeoman工作方式。而Yeoman本身不是一个工具。<br>&emsp;&emsp;<a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a>是一个自动化任务工具。它可以自动执行如代码检查、测试、压缩等任务。值得一提的是他能自动编译SASS文件，并且可以自动刷新网页。<br>&emsp;&emsp;<a href="http://bower.io/" target="_blank" rel="external">Bower</a>是一个包管理工具，它可以自动下载、更新所有依赖的库文件，比如Jquery。</p>
 <h2 id="安装Yeoman">安装Yeoman</h2><p><img src="http://7vzu7o.com1.z0.glb.clouddn.com/useyeoman.png" alt="描述"></p>
@@ -76,6 +76,8 @@
     <summary type="html">
     <![CDATA[<h2 id="什么是_Yeoman">什么是 Yeoman</h2><p>&emsp;&emsp;<a href="http://yeoman.io/" target="_blank" rel="external">Yeoman</a>是由<a href="https://gi]]>
     </summary>
+    
+      <category term="前端工具" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
