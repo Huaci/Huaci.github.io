@@ -176,8 +176,27 @@
           
             <h3 id="编码约定">编码约定</h3><p>确定并遵循编码约定是非常重要的，这可以使得代码更为一致、可预测、更容易阅读和理解。</p>
 <h3 id="缩进">缩进</h3><p>一些程序员喜欢使用tab来进行缩进，因为任何人都可以调整编辑器来显示该tab，tab可以自定义若干个空格。一些程序员喜欢使用空格来缩进，通常是使用4个空格来缩进。在<a href="http://book.douban.com/subject/11506062/" target="_blank" rel="external">《JavaScrip模式》</a>这本书使用了4个空格进行缩进，这也是JSLint的默认值。那么需要对那些内容执行缩进呢？规则很简单，只要对大括号内的所有代码执行缩进。这主要包含了函数体，循环体和对象字面量引用的属性。下面是书上的一个例子</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span><span class="params">(a, b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> c = <span class="number">1</span>,</span><br><span class="line">                d = <span class="number">2</span>,</span><br><span class="line">                inner;</span><br><span class="line">        <span class="keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">            inner = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    r: c - d</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            inner = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    r: c + d</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> inner;</span><br><span class="line">    &#125;</span><br><span class="line">```     </span><br><span class="line"></span><br><span class="line">###大括号</span><br><span class="line">例如<span class="keyword">for</span>循环内只有一条语句，可以不需要大括号，但为了一致性和方便升级，最好加上大括号，<span class="keyword">if</span>也是。</span><br><span class="line"></span><br><span class="line">```JavaScrip</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    alert(i);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>一般编辑器都带有代码格式化插件，如webstorm，使用快捷键 Ctrl+Alt+L 就可以格式化代码。</p>
+<pre><code class="JavaScript"><span class="function"><span class="keyword">function</span> <span class="title">outer</span><span class="params">(a, b)</span> </span>{
+        <span class="keyword">var</span> c = <span class="number">1</span>,
+                d = <span class="number">2</span>,
+                inner;
+        <span class="keyword">if</span> (a &gt; b) {
+            inner = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{
+                <span class="keyword">return</span> {
+                    r: c - d
+                };
+            };
+        } <span class="keyword">else</span> {
+            inner = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{
+                <span class="keyword">return</span> {
+                    r: c + d
+                };
+            };
+        }
+        <span class="keyword">return</span> inner;
+    }
+</code></pre>
+<h3 id="大括号">大括号</h3><p>例如for循环内只有一条语句，可以不需要大括号，但为了一致性和方便升级，最好加上大括号，if也是。<br>一般编辑器都带有代码格式化插件，如webstorm，使用快捷键 Ctrl+Alt+L 就可以格式化代码。</p>
 <h3 id="空格">空格</h3><p>使用空格有助于代码的可读性和一致性。<br>使用空格比较好的位置包含如下：</p>
 <blockquote>
 <ul>
