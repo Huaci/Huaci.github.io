@@ -18,9 +18,9 @@
 
 
 
-	<meta name="keywords" content="前端工具," />
+	<meta name="keywords" content="CentOS7," />
 
-  <title> Yeoman学习笔记 // HUACI </title>
+  <title>  Centos7搭建J2EE环境 // HUACI </title>
 </head>
 
 <body>
@@ -109,7 +109,7 @@
           
           
             
-              Yeoman学习笔记
+               Centos7搭建J2EE环境
             
           
         </h1>
@@ -118,7 +118,7 @@
       <div class="post-meta">
         <span class="post-time">
           
-            发表于 2015-03-08
+            发表于 2015-08-24
           
         </span>
 
@@ -130,8 +130,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/03/08/Yeoman学习笔记/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/08/Yeoman学习笔记/"></span>
+            <a href="/2015/08/24/CentOS7搭建J2EE环境/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/24/CentOS7搭建J2EE环境/"></span>
             </a>
           </span>
           
@@ -146,25 +146,22 @@
         
 
         
-          <h2 id="什么是_Yeoman">什么是 Yeoman</h2><p>&emsp;&emsp;<a href="http://yeoman.io/" target="_blank" rel="external">Yeoman</a>是由<a href="https://github.com/paulirish" target="_blank" rel="external">Paul Irish</a>、<a href="https://github.com/addyosmani" target="_blank" rel="external">Addy Osmani</a>、<a href="https://github.com/sindresorhus" target="_blank" rel="external">Sindre Sorhus</a>、<a href="https://github.com/mklabs" target="_blank" rel="external">Mickael Daniel</a>、<a href="https://github.com/ebidel" target="_blank" rel="external">Eric Bidelman</a>和<a href="https://github.com/yeoman/yeoman" target="_blank" rel="external">Yeoman社区</a>共同开发的一个项目。<br>它旨在为开发者提供一系列健壮的工具、程序库和工作流，帮助他们快速构建出漂亮、引人注目的Web应用。</p>
-<h2 id="Yeoman由三个工具的组成:Yo（脚手架工具）、grunt（构建工具）、bower（包管理器）">Yeoman由三个工具的组成:Yo（脚手架工具）、grunt（构建工具）、bower（包管理器）</h2><p>&emsp;&emsp;<a href="http://yeoman.io/" target="_blank" rel="external">Yo</a>是一个“脚手架”应用，简单说就是能够自动创建一些工程目录和配置文件。使用Yo工具叫做Yeoman工作方式。而Yeoman本身不是一个工具。<br>&emsp;&emsp;<a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a>是一个自动化任务工具。它可以自动执行如代码检查、测试、压缩等任务。值得一提的是他能自动编译SASS文件，并且可以自动刷新网页。<br>&emsp;&emsp;<a href="http://bower.io/" target="_blank" rel="external">Bower</a>是一个包管理工具，它可以自动下载、更新所有依赖的库文件，比如Jquery。</p>
-<h2 id="安装Yeoman">安装Yeoman</h2><p><img src="http://7vzu7o.com1.z0.glb.clouddn.com/useyeoman.png" alt="描述"></p>
-<p>&emsp;&emsp;安装Yeoman其实就是安装组成它的那几个工具，我的系统是win7 64位。<br>在安装之前还需要安装<a href="https://nodejs.org/" target="_blank" rel="external">Nodejs</a>和npm，由于新版的NodeJS已经集成了npm，所以在官网直接下载安装就好了。<br>最好把git也装下，在Windows上安装<a href="http://git-scm.com/download" target="_blank" rel="external">git</a>，点击链接根据自己情况下载。</p>
-<p>&emsp;&emsp;在cmd或者任意地方右键打开Git Bash进行全局安装Yeoman所需要的工具</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g yo bower grunt-cli gulp</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;安装所需要的生成器（generator），常见的有generator-webapp，generator-angular,generator-backbone和generator-ember。 </p>
-<p>举个例子：<br>&emsp;&emsp;安装angular生成器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g generator-angular</span><br></pre></td></tr></table></figure>
-<p>新建个目录，构建angular项目</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yo angular</span><br></pre></td></tr></table></figure>
-<p><img src="http://7vzu7o.com1.z0.glb.clouddn.com/angular.png" alt="描述"></p>
-<p>&emsp;&emsp;<a href="http://sass-lang.com/" target="_blank" rel="external">sass</a>是一种CSS的开发工具，提供了许多便利的写法，大大节省了设计者的时间，使得CSS的开发，变得简单和可维护。这个在以后在慢慢整理介绍^6^。</p>
-<p>当运行完成后就会在改目录生成一个angular项目，目录如下<br><img src="http://7vzu7o.com1.z0.glb.clouddn.com/a.png" alt="angular"></p>
-<p>app：项目主目录，是部署的根目录<br>node_modules： nodejs的包文件<br>test：测试目录，专门用于单元测试，用的是 mocha 来测试<br>bower.json:里面记录项目的依赖包。<br>Gruntfile.js:grunt配置文件，配置任务或者自定义任务<br>package.json:nodejs包管理文件<br>这项目原本没有bower_components目录，当执行bower install 依赖包才会产生此目录，并将依赖包存放在此目录。例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower install  bootstrap</span><br></pre></td></tr></table></figure></p>
-<p>最后执行</p>
-<pre><code class="bash">$ grunt server
-</code></pre>
-<p>就可以在浏览器看到该项目的首页面了。</p>
+          <p>本文的主要介绍CentOS7安装JDK8、Tomcat8和mysql。</p>
+<p>当初选择CentOS作为服务器系统主要因为阿里云的推荐，所以就开始了CentOS系统的学习，发现它的更新速度也比较快，目前最高版本已经7.1了。</p>
+<p>话不多说，这里也是基于在阿里云上的系统进行安装的，当然你也可以下载镜像文件在自己的虚拟机上学习。</p>
+<h3 id="安装JDK8">安装JDK8</h3><p>先查看系统是否自带了openjdk<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep openjdk</span><br></pre></td></tr></table></figure></p>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep java</span><br></pre></td></tr></table></figure>
+<p>   如果存在的话就将其删除。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm <span class="operator">-e</span> --nodeps java-<span class="number">1.8</span>.<span class="number">0</span>-openjdk-headless-<span class="number">1.8</span>.<span class="number">0.51</span>-<span class="number">1</span>.b16.el7_1.x86_64</span><br></pre></td></tr></table></figure>
+<p>如果出现找不到openjdk source的话，那么还可以这样卸载</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y remove java java-<span class="number">1.8</span>.<span class="number">0</span>-openjdk-headless-<span class="number">1.8</span>.<span class="number">0.51</span>-<span class="number">1</span>.b16.el7_1.x86_64</span><br></pre></td></tr></table></figure>
+<p>JDK对应自己出现的版本，现在的阿里云CentOS7已经没自带Openjdk了，但网上下载的镜像文件依然还有。</p>
+<p>清除完可以在检查一遍。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep java</span><br></pre></td></tr></table></figure></p>
+<p> 接下来安装JDK8</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/</span><br></pre></td></tr></table></figure>
+<p>  下载JDK8压缩包<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-cookies --no-check-certificate --header <span class="string">"Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie"</span> <span class="string">"http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-linux-x64.tar.gz"</span></span><br></pre></td></tr></table></figure></p>
+<p> 解压文件<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar xzf jdk-<span class="number">8</span>u51-linux-x64.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /opt/jdk1.<span class="number">8.0</span>_51/</span><br></pre></td></tr></table></figure></p>
 
         
       </div>
@@ -175,8 +172,8 @@
         
           <div class="post-tags">
             
-              <a href="/tags/前端工具/">
-                #前端工具
+              <a href="/tags/CentOS7/">
+                #CentOS7
               </a>
             
           </div>
@@ -186,11 +183,11 @@
           <div class="post-nav">
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2015/03/31/JavaScript编码约定/">JavaScript编码约定</a>
-              
             </div>
 
             <div class="post-nav-next post-nav-item">
+              
+                <a href="/2015/04/25/Mysql入门/">Mysql入门</a>
               
             </div>
           </div>
@@ -207,8 +204,8 @@
   
     <div class="comments" id="comments">
       
-        <div class="ds-thread" data-thread-key="2015/03/08/Yeoman学习笔记/"
-             data-title="Yeoman学习笔记" data-url="http://yoursite.com/2015/03/08/Yeoman学习笔记/">
+        <div class="ds-thread" data-thread-key="2015/08/24/CentOS7搭建J2EE环境/"
+             data-title=" Centos7搭建J2EE环境" data-url="http://yoursite.com/2015/08/24/CentOS7搭建J2EE环境/">
         </div>
 
       
@@ -302,7 +299,7 @@
         <div class="post-toc">
           
           
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是_Yeoman"><span class="nav-number">1.</span> <span class="nav-text">什么是 Yeoman</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Yeoman由三个工具的组成:Yo（脚手架工具）、grunt（构建工具）、bower（包管理器）"><span class="nav-number">2.</span> <span class="nav-text">Yeoman由三个工具的组成:Yo（脚手架工具）、grunt（构建工具）、bower（包管理器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Yeoman"><span class="nav-number">3.</span> <span class="nav-text">安装Yeoman</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装JDK8"><span class="nav-number">1.</span> <span class="nav-text">安装JDK8</span></a></li></ol></div>
           
         </div>
         <div class="post-toc-indicator-bottom post-toc-indicator"></div>
